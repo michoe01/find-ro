@@ -1,0 +1,599 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --farve-60: #F2FFDD;
+    --farve-30: #6656A6;
+    --farve-10: #C34565;
+}
+
+body {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    background-color: var(--farve-60);
+    color: #000;
+}
+
+h1 {
+    font-size: 54px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h2, h3 {
+    margin-bottom: 0.5em;
+}
+
+h4 {
+    font-size: 19px;
+    margin-bottom: 0.1em;
+}
+
+.brodtekst {
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+p.brodtekst + p.brodtekst {
+    margin-top: 1.5em;
+}
+
+.intro-forside p.brodtekst + p.brodtekst {
+    margin-top: 0;
+}
+
+.afstand {
+    margin-top: 10em;
+}
+
+.lille-afstand {
+    margin-top: 5em;
+}
+
+.knap, .kontakt-formular {
+    border: none;
+    border-radius: 15px;
+}
+
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 0.6em 4%;
+}
+
+.logo {
+    justify-self: start;
+    color: #000;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+.slogan {
+    justify-self: center;
+    padding: 0.15em 0;
+    border-top: 0.12em solid var(--farve-30);
+    border-bottom: 0.12em solid var(--farve-30);
+    color: var(--farve-30);
+    font-family: 'Caladea', serif;
+    font-size: 22px;
+    font-style: italic;
+    text-align: center;
+}
+
+.hovednavigation {
+    display: flex;
+    justify-self: end;
+    gap: 5em;
+}
+
+.hovednavigation a {
+    color: #000;
+    font-size: 19px;
+    text-decoration: none;
+}
+
+.hovednavigation a[aria-current="page"] {
+    color: var(--farve-30);
+}
+
+.hovednavigation a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--farve-10);
+    text-decoration-thickness: 0.12em;
+    text-underline-offset: 0.3em;
+}
+
+
+
+/* Billeder og sidetitler */
+img {
+    display: block;
+    width: 100%;
+}
+
+.topbillede {
+    position: relative;
+}
+
+.topbillede h1 {
+    position: absolute;
+    top: 103%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.2em 0.7em;
+    border-radius: 10px;
+    background-color: var(--farve-30);
+    color: #fff;
+    text-align: center;
+}
+
+.sidetitel {
+    position: relative;
+}
+
+.titelstreg {
+    height: 1.5em;
+    background-color: var(--farve-10);
+}
+
+.sidetitel h1 {
+    position: absolute;
+    transform: translateY(-40%);
+    padding: 0.2em 6% 0.2em 4%;
+    border-radius: 0 0 100px 0;
+    background-color: var(--farve-10);
+    color: #fff;
+    font-size: 36px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Intro og forside */
+.intro {
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.intro-ovelser h2,
+.intro p.brodtekst {
+    width: 90%;
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: left;
+}
+
+.intro-gode-raad p.brodtekst {
+    text-align: center;
+}
+
+.genveje {
+    display: grid;
+    width: 92%;
+    margin-right: auto;
+    margin-left: auto;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+.genvejsfelt {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    justify-items: center;
+    padding: 0 2em;
+}
+
+.genvejsfelt h2 {
+    font-size: 28px;
+}
+
+.genvejsfelt:first-child {
+    border-right: 0.12em solid var(--farve-30);
+}
+
+.knap {
+    display: inline-block;
+    margin-top: 1.5em;
+    padding: 0.5em 3em;
+    background-color: var(--farve-10);
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.knap:hover {
+    background-color: #96344F;
+}
+
+/* Footer */
+footer {
+    display: grid;
+    width: 92%;
+    margin: 10em auto 1.5em;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 0.12em solid var(--farve-30);
+    line-height: 1.5;
+}
+
+footer > * {
+    padding-top: 1.5em;
+}
+
+footer h2 {
+    margin-bottom: 0.1em;
+    font-size: 19px;
+}
+
+.sidefod-kolonne {
+    padding-bottom: 1.5em;
+    border-bottom: 0.12em solid var(--farve-30);
+}
+
+footer nav a {
+    display: block;
+    width: fit-content;
+    color: var(--farve-30);
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--farve-10);
+}
+
+
+
+.om-sidefod {
+    grid-column: 1 / 3;
+}
+
+.ophavsret {
+    grid-column: 3;
+    align-self: end;
+    text-align: right;
+}
+
+/* Øvelser */
+.ovelse-bjaelke {
+    width: 92%;
+    height: 0.12em;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: var(--farve-30);
+}
+
+.ovelse {
+    display: grid;
+    width: 84%;
+    margin-right: auto;
+    margin-left: auto;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 4%;
+    align-items: start;
+}
+
+.ovelse-overskrift {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5em;
+}
+
+
+.ovelse-overskrift h3 {
+    color: var(--farve-10);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.ovelse-video {
+    align-self: center;
+    min-width: 0;
+}
+
+.ovelse-video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+.videokilde {
+    margin-top: 0.5em;
+    font-size: 16px;
+}
+
+.ovelse-trin {
+    margin-top: 1.5em;
+    padding-left: 1.5em;
+}
+
+.ovelse-trin li + li {
+    margin-top: 1.5em;
+}
+
+.ovelse-trin h4 {
+    margin-bottom: 0.2em;
+}
+
+.ovelse-trin p.brodtekst {
+    font-size: 18px;
+}
+
+.ovelse-tid {
+    color: var(--farve-30);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.ovelse-note {
+    margin-top: 1.5em;
+    font-size: 17px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.pause {
+    border-right: 1.5em solid var(--farve-30);
+    border-left: 1.5em solid var(--farve-30);
+}
+
+.pause-indhold {
+    display: grid;
+    width: 81%;
+    max-width: 1260px;
+    margin: 0 auto;
+    grid-template-columns: 1.4fr 0.6fr;
+    column-gap: 10%;
+    row-gap: 10em;
+}
+
+.pause-intro {
+    grid-column: 1 / -1;
+}
+
+/* Kontakt */
+.kontakt {
+    display: grid;
+    width: 92%;
+    margin: 10em auto 0;
+    padding: 0 4%;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: stretch;
+    gap: 10%;
+    border-left: 0.12em solid var(--farve-30);
+}
+
+.kontakt-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.kontakt-oplysninger p {
+    line-height: 1.5;
+}
+
+.kontakt-formular {
+    padding: 2em 2.5em;
+    background-color: var(--farve-30);
+    color: #fff;
+}
+
+.kontakt-formular h2 {
+    margin-bottom: 1em;
+    font-size: 24px;
+    color: #fff;
+}
+
+.kontakt-formular label {
+    display: block;
+    margin-bottom: 0.4em;
+    font-size: 19px;
+    color: #fff;
+}
+
+.kontakt-formular input,
+.kontakt-formular textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1.2em;
+    padding: 0.7em;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--farve-60);
+    color: #000;
+    font-size: 18px;
+}
+
+.kontakt-formular textarea {
+    min-height: 10em;
+    resize: none;
+}
+
+.kontakt-formular button {
+    background-color: var(--farve-60);
+    color: black
+}
+
+.kontakt-formular button:hover {
+    background-color: var(--farve-10);
+    color: #fff;
+}
+
+/* Tilgængelighed */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--farve-30);
+    outline-offset: 2px;
+}
+
+.kontakt-formular input:focus-visible,
+.kontakt-formular textarea:focus-visible,
+.kontakt-formular button:focus-visible {
+    outline-color: var(--farve-60);
+}
+
+.spring-over-link {
+    position: fixed;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.spring-over-link:focus {
+    top: 10%;
+}
+
+/* Mobil */
+@media screen and (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    .logo,
+    .slogan,
+    .hovednavigation {
+        justify-self: center;
+    }
+
+    .slogan {
+        font-size: 18px;
+    }
+
+    .hovednavigation {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .afstand {
+        margin-top: 5em;
+    }
+
+    .lille-afstand {
+        margin-top: 3em;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .brodtekst {
+        font-size: 18px;
+    }
+
+    .topbillede h1 {
+        width: max-content;
+        font-size: 32px;
+        white-space: normal;
+    }
+
+    .genveje,
+    .ovelse,
+    .kontakt {
+        grid-template-columns: 1fr;
+    }
+
+    .kontakt,
+    footer {
+        margin-top: 5em;
+    }
+
+    .genveje {
+        gap: 2em;
+    }
+
+    .genvejsfelt:first-child {
+        padding-bottom: 2em;
+        border-right: none;
+        border-bottom: 0.12em solid var(--farve-30);
+    }
+
+    .ovelse {
+        width: 90%;
+        gap: 2em;
+    }
+
+    .ovelse-overskrift {
+        flex-wrap: wrap;
+    }
+
+    .pause {
+        border-right-width: 0.5em;
+        border-left-width: 0.5em;
+    }
+
+    .pause-indhold {
+        width: 90%;
+        max-width: none;
+        grid-template-columns: 1fr;
+        gap: 3em;
+    }
+
+    .pause-indhold img {
+        max-height: 350px;
+        object-fit: cover;
+    }
+
+    .pause-billede {
+        order: 1;
+    }
+
+    .pause-tekst {
+        order: 2;
+    }
+
+    .kontakt {
+        gap: 3em;
+        padding: 0 5%;
+        align-items: start;
+    }
+
+    .kontakt-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        gap: 3em 2em;
+    }
+
+    .kontakt-info > div:first-child {
+        grid-column: 1 / -1;
+    }
+
+    
+    footer {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 1.5em;
+    }
+
+    .om-sidefod,
+    .ophavsret {
+        grid-column: 1 / -1;
+    }
+
+    .ophavsret {
+        text-align: left;
+    }
+}
